@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <link rel="icon" type="image/png" href="assets/images/3dviewer_logo.png">
+    <link rel="canonical" href="https://3dviewer.net">
+
+    <title>Online 3D Viewer</title>
+
+    <!-- meta start -->
+    <!-- meta end -->
+
+    <link rel="stylesheet" type="text/css" href="o3dv/o3dv.website.min.css?v=0.14.0">
+    <script type="text/javascript" src="o3dv/o3dv.website.min.js?v=0.14.0"></script>
+
+
+    <!-- website analytics start -->
+    <script type="text/javascript">
+        OV.SetWebsiteEventHandler ((eventName, eventLabel, eventParams) => {
+            console.log ({
+                eventName : eventName,
+                eventLabel : eventLabel,
+                eventParams : eventParams
+            });
+        });
+    </script>
+    <!-- website analytics end -->
+
+    <script type="text/javascript">
+         OV.StartWebsite ('libs');
+    </script>
+
+</head>
+
+<body>
+    <input type="file" id="open_file" style="display:none;" multiple></input>
+    <div class="header" id="header">
+        <div class="title">
+            <div class="title_left">
+                <a href="index.html">
+                    <img class="logo_image" src="assets/images/3dviewer_logo.png" alt="logo" />
+                    <div class="logo_image_text">ONLINE 3D VIEWER</div>
+                </a>
+            </div>
+            <div class="title_right" id="header_buttons"></div>
+            <div class="main_file_name only_full_width" id="main_file_name"></div>
+        </div>
+        <div class="toolbar" id="toolbar"></div>
+    </div>
+    <div class="main" id="main">
+        <div class="main_left_container only_full_width" id="main_left_container">
+            <!-- <div class="main_navigator ov_panel_set_container" id="main_navigator"></div>
+            <div class="main_splitter" id="main_navigator_splitter"></div> -->
+            <div class="main_splitter" id="main_sidebar_splitter"></div>
+            <div class="main_sidebar ov_panel_set_container" id="main_sidebar"></div>
+        </div>
+        <div class="main_viewer" id="main_viewer"></div>
+        <div class="main_right_container only_full_width" id="main_right_container">
+            <div class="main_navigator ov_panel_set_right_container" id="main_navigator"></div>
+            <div class="main_splitter" id="main_navigator_splitter"></div>
+        </div>
+    </div>
+    <div class="intro ov_thin_scrollbar" id="intro">
+        <div class="intro_content" id="intro_content">
+            <div class="intro_container_image" >
+                <img class="intro_main_image" src="assets/images/3dviewer_main.png" alt="main" />
+            </div>
+            <div class="intro_container">
+                <div class="intro_logo">
+                    <div class="intro_logo_container">
+                        <img class="intro_logo" src="assets/images/3dviewer_logo.png" alt="logo" />
+                        <div class="intro_logo_text">ONLINE 3D VIEWER</div>
+                    </div>
+                    <div class="intro_dragdrop_text" id="intro_dragdrop_text"></div>
+                </div>
+                <div class="intro_formats">
+                    <div class="intro_formats_title" id="intro_formats_title"></div>
+                    <div class="intro_file_formats">
+                        <a>3dm</a>
+                        <a>3ds</a>
+                        <a>3mf</a>
+                        <a>amf</a>
+                        <a>bim</a>
+                        <a>brep</a>
+                        <a>dae</a>
+                        <a>fbx</a>
+                        <a>fcstd</a>
+                        <a>gltf</a>
+                        <a>ifc</a>
+                        <a>iges</a>
+                        <a>step</a>
+                        <a>stl</a>
+                        <a>obj</a>
+                        <a>off</a>
+                        <a>ply</a>
+                        <a>wrl</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- intro footer start -->
+            <!-- intro footer end -->
+        </div>
+    </div>
+</body>
+
+</html>
